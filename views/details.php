@@ -48,7 +48,7 @@
                 <?php endif; ?>
             </td>
             <td><?php echo \yii\helpers\Html::encode($report['url']); ?></td>
-            <td><?php echo date('Y-m-d H:i:s', $report['time']) ?>.<?php echo substr((string)($report['time'] - floor($report['time'])), 2, 3) ?></td>
+            <td><?php echo date('Y-m-d H:i:s', intval($report['time'])) ?>.<?php echo substr((string)($report['time'] - floor($report['time'])), 2, 3) ?></td>
             <td style="text-align: center;">
                 <a href="#" class="xhprof-report" title="View report" data-id="<?php echo $report['runId'] ?>"
                    data-ns="<?php echo $report['ns'] ?>" target="_blank"><i class="glyphicon glyphicon-file"></i></a>
